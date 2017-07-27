@@ -1,0 +1,67 @@
+* The OSS World
+
+#+begin_quote
+“Man cannot discover new oceans unless he has the courage to lose sight of the 
+shore.”
+― André Gide
+#+end_quote
+
+The Open Source Software World is a tool for worldbuilding, intended to tailor
+to the individual user's needs. Rather than a single developer guessing what a
+given user will need, the OSS World focuses on being modular, allowing each user
+to use only the plugins which help them most.
+
+** Why the OSS World?
+
+There is a variety of fantastic worldbuilding software available for creators.
+What sets the OSS world apart?
+
+- It's free, yeah I like my money as much as you do.
+- It's open source, you can see exactly what the software does to your precious
+  world and even adjust it to your liking.
+- It's modular. Developers aren't trying to tailor to many users, instead each
+  plugin developer can focus on a small target audience.  
+
+** Installation and Usage
+
+As you can probably tell, the OSS World is still in super-early alpha. Right now
+few plugins exists, and the program won't serve functionally for a while. What
+you see here is more of a proof of concept and a way for plugin developers to
+begin work.
+
+First ensure you have Java 8 and [[https://github.com/boot-clj/boot][boot]] installed.
+
+To build an uberjar run this in the project directory:
+#+BEGIN_SRC bash
+  boot build -u target
+#+END_SRC
+
+To start the application run:
+#+BEGIN_SRC bash
+  java -jar target/oss-world.jar
+#+END_SRC
+
+** Contributing
+
+The biggest way to contribute is to develop more plugins for the OSS World. For
+more information on how to do this, see the [[file:plugin-specification.org][plugin specification.]] See the plugin
+list below on what has already been done (and consider contributing to those
+plugins). Note that develop does not include solely code, design and ideas are
+also greatly needed.
+
+You can also help out with testing and bug reports. Submit any bugs (or
+suggestions) at the OSS World's [[https://github.com/oss-world/oss-world/issues][issue tracker]] or at individual plugins' issue 
+trackers.
+
+*** Example Plugins
+
+For example plugins' source see the [[https://github.com/oss-world/oss-world-example-clojure][clojure plugin]] and the [[https://github.com/oss-world/oss-world-example-java][java plugin]]. 
+
+** Available Plugins
+
+*There's nothing here, post an issue to the [[https://github.com/oss-world/oss-world/issues][tracker]] to ask me to add your plugin* 
+
+** License
+
+The OSS World is licensed under the Eclipse Public License v1.0. Please see the
+[[file:LICENSE][LICENSE]] file for more information.

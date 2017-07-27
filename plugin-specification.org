@@ -1,0 +1,69 @@
+* Plugin Specification
+** What is a plugin?
+
+In this case, a plugin is a small program that is loaded and run within the API
+of the OSS World. A plugin can do anything, but often creates an activity and
+opens up a new window, providing the user with features from there.
+
+The OSS World defines a plugin by the "plugin.edn" file, which contains the
+necessary information to run the plugin.
+
+** plugin.edn structure
+
+A plugin.edn file should contain a single map with the following options:
+
+| Key      | Description                                                 | Required? |
+|----------+-------------------------------------------------------------+-----------|
+| ~:id~    | The unique identifier keyword for the plugin.               | Yes       |
+| ~:init~  | The identifier of the function used to load the plugin.     | Yes       |
+| ~:del~   | The identifier of the function used to shutdown the plugin. | No        |
+| ~:java?~ | Whether or not the plugin is a java plugin (see below).     | No        |
+
+*** Example plugin.edn file for Clojure
+
+#+BEGIN_SRC clojure
+  {:init :example-clojure-plugin
+   :init example-clojure-plugin.core/entry
+   :del example-clojure-plugin.core/del}
+#+END_SRC
+
+Both ~:init~ and ~:del~ should be fully qualified symbols pointing to functions
+which have at least one arity for no arguments (multi-arity is fine, so long as
+one option takes no arguments).
+
+*** Example plugin.edn file for Java
+
+#+BEGIN_SRC clojure
+  {:id :example-plugin-java
+   :init org.example.example_plugin_java.Core/entry
+   :del org.example.example_plugin_java.Core/del
+   :java? true}
+#+END_SRC
+
+Both ~:init~ and ~:del~ should be the fully qualified name to a class, with a
+public static method that takes no arguments separated by a slash.
+
+** Plugin API
+
+The OSS World exposes a plugin api in the namespace and class ~oss-world.api~
+(yes, it's a class with a lowercase name). All methods in the class are static.
+Each function has its own docstring/javadoc, and are fairly simple. It is
+recommended to simply read that.
+
+** Adding your plugin to the OSS World
+   
+Plugins are specified as maven artifacts (in the style used by lein or boot) in the "plugins/plugins.edn" file of the
+OSS World data folder (inside "%APPDATA%" for windows, inside 
+"~/Library/Application Support" for Mac and at "~/.oss-world" for Linux or 
+anything else). For example:
+
+#+BEGIN_SRC clojure
+  [[oss_world/oss_world_example "1.0"]
+   [oss_world/oss_world_example_java "1.0"]]
+#+END_SRC
+
+Plugins must be in either maven central or clojars for now.
+** Example Plugins
+
+You can see two example plugins: the [[https://github.com/oss-world/oss-world-example-clojure][clojure plugin]] and the [[https://github.com/oss-world/oss-world-example-java][java plugin]] for 
+more information on how to create a functioning plugin.

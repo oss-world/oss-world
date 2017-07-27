@@ -1,0 +1,17 @@
+* Specification for the OSS World app
+** Overall Goals
+
+OSS world seeks to offer worldbuilders a cheap and effective alternative to
+proprietary worldbuilding software. It is intended to be:
+
+ - Highly modular
+ - Inclusive of a variety of features through modules
+
+** Specific Architecture
+
+The central app will simply be a landing platform. It will provide hooks to
+allow modules to communicate and will create a gui to allow access to other
+modules through a menu type system.
+
+#+CAPTION: Mockup of home screen
+[[./home_screen_mockup.png]]
