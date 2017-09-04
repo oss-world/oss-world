@@ -1,5 +1,7 @@
 * The OSS World
 
+[[https://gitter.im/oss-world/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link][https://badges.gitter.im/org.png]] [[https://matrix.to/#/#oss-world:matrix.org][https://img.shields.io/badge/matrix-join%20chat-yellow.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAABHNCSVQICAgIfAhkiAAAASFJREFUOI3Nkz%2BKwkAYxX9jhPwBSW2h6VJaWloIXkQ8Qs5hr50gWHqAlLlB7hKSmJi3hTuuWdYiCwv76x4z733wvhkDCEASQzDGADD6jfnVMxrs%2FMbfBdxuN7que%2BqyLN%2BGyJKmqVarlZIk0Ww202Kx0Ol00nq91nQ61Xa7VVEUz%2Ft8LeDB%2BXwWoM1mo%2BPxKN%2F3BWi%2F32u32wnQ9Xp9H3C5XAQoyzJJ0nK5VBzHkqQ8zwXocDj0An7swK5IEq7rAlBV1aO0Ud%2FSU7a0%2B%2F0OQNM01HXdC7VnlvGrmEwmRFFEEAQAzOfz52TP84iiiDAMewHmswMA2ralrms8z8NxHKqqQhK%2B79N1HWVZ4rou4%2FFjrjGmHzAUY8x%2Fecr2aw7Bej4AEVrFCfPS9F0AAAAASUVORK5CYII%3D]] [[https://webchat.freenode.net/?channels=%23oss-world&uio=d4][https://img.shields.io/badge/irc-join%20chat-blue.svg]]
+
 #+begin_quote
 “Man cannot discover new oceans unless he has the courage to lose sight of the 
 shore.”
